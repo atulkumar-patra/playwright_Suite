@@ -1,0 +1,25 @@
+{
+  "name": "playwright_work",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/WebApiPart1.spec.js --headed",
+    "tagTest": "npx playwright test --grep @tagTest",
+    "safariConfigRun": "npx playwright test --config playwright.config1.js --projects=safari",
+    "specialocatorsTC": "npx playwright test --grep @specialocators",
+ 
+    "cucumberRegressionTc": "npx cucumber-js --tags @RegressionTC --retry 1 --exit --format html:cucumber-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.11"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.6.0",
+    "allure-playwright": "^2.15.1"
+  }
+}
